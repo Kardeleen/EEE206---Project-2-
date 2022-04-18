@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+main(){
+int name[11];
+int password[6];
+printf("Enter username: ");
+scanf("%s",name);
+printf("Enter password: ");
+scanf("%s",password);
+if (strcmp(name, "20191706005") == 0 && strcmp(password, "123456") == 0)
+printf("Access granted\n");
+else printf("Access denied\n");
+{
+    char answer[30];
+    char affirmative[] = "yes";
+
+    printf("Will Deren be the head of the university? ");
+    scanf("%s", answer);
+    if(strcmp(affirmative, answer) == 0) {
+	printf("Thank you for your ballot vote\n");
+    }
+    else {
+	printf("Sorry to hear that\n");
+    }
+
+}
+printf("Enter username: ");
+scanf("%s",name);
+printf("Enter password: ");
+scanf("%s",password);
+if (strcmp(name, "20191706025") == 0 && strcmp(password, "190456") == 0)
+printf("Access granted\n");
+else printf("Access denied\n");
+{
+    char answer[30];
+    char affirmative[] = "yes";
+
+    printf("Will Deren be the head of the university? ");
+    scanf("%s", answer);
+    if(strcmp(affirmative, answer) == 0) {
+	printf("Thank you for your ballot vote\n");
+    }
+    else {
+	printf("Sorry to hear that\n");
+    }
+
+}
+printf("Enter username: ");
+scanf("%s",name);
+printf("Enter password: ");
+scanf("%s",password);
+if (strcmp(name, "20191706013") == 0 && strcmp(password, "189750") == 0)
+printf("Access granted\n");
+else printf("Access denied\n");
+{
+    char answer[30];
+    char affirmative[] = "yes";
+
+    printf("Will Deren be the head of the university? ");
+    scanf("%s", answer);
+    if(strcmp(affirmative, answer) == 0) {
+	printf("Thank you for your ballot vote\n");
+    }
+    else {
+	printf("Sorry to hear that\n");
+    }
+
+    return (0);
+}
+getch();
+}
