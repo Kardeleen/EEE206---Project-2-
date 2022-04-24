@@ -5,9 +5,9 @@
 
 main(){
 char usernames [3] [40] = {"20191706005","20191706025","20191706013"};
-char password1 [20] = "123456";
-char password2 [20] = "190456";
-char password3 [20] = "189750";
+char password1 [20] = "1234";
+char password2 [20] = "5678";
+char password3 [20] = "9012";
 char vote1 [10];
 char vote2 [10];
 char vote3 [10];
@@ -32,7 +32,7 @@ while (true) {
 		if (strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0) {
 			printf("Write your new password: ");
 			scanf("%s",&password);
-			strcpy(password3,password);
+			strcpy(password1,password);
 			printf("Your password is changed.\n");
 		}
 		
@@ -72,7 +72,7 @@ while (true) {
 		if (strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0) {
 			printf("Write your new password: ");
 			scanf("%s",&password);
-			strcpy(password3,password);
+			strcpy(password2,password);
 			printf("Your password is changed.\n");
 		}
 		
