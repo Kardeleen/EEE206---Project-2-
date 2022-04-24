@@ -1,73 +1,210 @@
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
+#include <stdbool.h>
 
 main(){
+char usernames [3] [40] = {"20191706005","20191706025","20191706013"};
+char password1 [20] = "123456";
+char password2 [20] = "190456";
+char password3 [20] = "189750";
+char vote1 [10];
+char vote2 [10];
+char vote3 [10];
+bool login [3] = {true, true, true};
 int name[11];
 int password[6];
-printf("Enter username: ");
-scanf("%s",name);
-printf("Enter password: ");
-scanf("%s",password);
-if (strcmp(name, "20191706005") == 0 && strcmp(password, "123456") == 0)
-printf("Access granted\n");
-else printf("Access denied\n");
-{
-    char answer[30];
-    char affirmative[] = "yes";
+char answer [10];
 
-    printf("Will Deren be the head of the university? ");
-    scanf("%s", answer);
-    if(strcmp(affirmative, answer) == 0) {
-	printf("Thank you for your ballot vote\n");
-    }
-    else {
-	printf("Sorry to hear that\n");
-    }
-
+while (true) {
+	printf("Enter username: ");
+	scanf("%s",&name);
+	printf("Enter password: ");
+	scanf("%s",&password);
+	
+		if (strcmp(name, usernames [0]) == 0) {
+			if(strcmp(password, password1) == 0){
+			
+		printf("Access granted\n");
+		
+		printf("Do you want to change your password? ");
+		scanf("%s",&answer);
+		if (strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0) {
+			printf("Write your new password: ");
+			scanf("%s",&password);
+			strcpy(password3,password);
+			printf("Your password is changed.\n");
+		}
+		
+	    char answer[30];
+	
+	    printf("Will Deren be the head of the university? (yes/indecisive/no) ");
+	    scanf("%s", answer);
+	    if(strcmp("yes", answer) == 0) {
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote1, "Y");
+		login [0] = false;
+	    }
+	    else if(strcmp("indecisive", answer) == 0){
+	    printf("Thank you for your ballot vote\n");
+	    strcpy(vote1, "I");
+		login [0] = false;
+		}
+	    else if(strcmp("no", answer) == 0){
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote1, "N");
+		login [0] = false;
+	    }
+	}
+	else{
+		printf("Access denied.\n");
+	}
+	}
+		else if (strcmp(name, usernames [1]) == 0 ) {
+			{
+				if(strcmp(password, password2) == 0){
+				
+			
+		printf("Access granted\n");
+		
+		printf("Do you want to change your password? ");
+		scanf("%s",&answer);
+		if (strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0) {
+			printf("Write your new password: ");
+			scanf("%s",&password);
+			strcpy(password3,password);
+			printf("Your password is changed.\n");
+		}
+		
+	    char answer[30];
+	
+	    printf("Will Deren be the head of the university? (yes/indecisive/no) ");
+	    scanf("%s", answer);
+	    if(strcmp("yes", answer) == 0) {
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote2, "Y");
+		login [1] = false;
+	    }
+	    else if(strcmp("indecisive", answer) == 0){
+	    printf("Thank you for your ballot vote\n");
+	    strcpy(vote2, "I");
+		login [1] = false;
+		}
+	    else if(strcmp("no", answer) == 0){
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote2, "N");
+		login [1] = false;
+	    }
+	}
+		else{
+		printf("Access denied.\n");
+	}
+	}
 }
-printf("Enter username: ");
-scanf("%s",name);
-printf("Enter password: ");
-scanf("%s",password);
-if (strcmp(name, "20191706025") == 0 && strcmp(password, "190456") == 0)
-printf("Access granted\n");
-else printf("Access denied\n");
-{
-    char answer[30];
-    char affirmative[] = "yes";
-
-    printf("Will Deren be the head of the university? ");
-    scanf("%s", answer);
-    if(strcmp(affirmative, answer) == 0) {
-	printf("Thank you for your ballot vote\n");
-    }
-    else {
-	printf("Sorry to hear that\n");
-    }
-
+		else if (strcmp(name, usernames [2]) == 0 ) {
+			if(strcmp(password, password3) == 0){
+		
+		printf("Access granted\n");
+		
+		printf("Do you want to change your password? ");
+		scanf("%s",&answer);
+		if (strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0) {
+			printf("Write your new password: ");
+			scanf("%s",&password);
+			strcpy(password3,password);
+			printf("Your password is changed");
+		}
+		
+	    char answer[30];
+	
+	    printf("Will Deren be the head of the university? (yes/indecisive/no)");
+	    scanf("%s", answer);
+	    if(strcmp("yes", answer) == 0) {
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote3, "Y");
+		login [2] = false;
+	    }
+	    else if(strcmp("indecisive", answer) == 0){
+	    printf("Thank you for your ballot vote\n");
+	    strcpy(vote3, "I");
+		login [2] = false;
+		}
+	    else if(strcmp("no", answer) == 0){
+		printf("Thank you for your ballot vote\n");
+		strcpy(vote3, "N");
+		login [2] = false;
+	    }
+	}
+		else{
+		printf("Access denied.\n");
+	}
 }
-printf("Enter username: ");
-scanf("%s",name);
-printf("Enter password: ");
-scanf("%s",password);
-if (strcmp(name, "20191706013") == 0 && strcmp(password, "189750") == 0)
-printf("Access granted\n");
-else printf("Access denied\n");
-{
-    char answer[30];
-    char affirmative[] = "yes";
-
-    printf("Will Deren be the head of the university? ");
-    scanf("%s", answer);
-    if(strcmp(affirmative, answer) == 0) {
-	printf("Thank you for your ballot vote\n");
-    }
-    else {
-	printf("Sorry to hear that\n");
-    }
-
-    return (0);
+	
+	else{
+		printf("Incorrect username\n");
+	}
+	
+	printf("Do you want to show results? ");
+	scanf("%s", answer);
+	if(strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0){
+		if(login[0] == true || login[1] == true || login[2] == true){
+			printf("All users have to ballot vote.\n");
+		}
+		
+		else{
+			int y = 0;
+			int n = 0;
+			int i = 0;
+		
+		
+			
+			if (strcmp(vote1, "Y") == 0){
+				y++;
+			}
+			
+			else if (strcmp(vote1, "N") == 0){
+				n++;
+			}
+			
+			else if (strcmp(vote1, "I") == 0){
+				i++;
+			}
+			
+			if (strcmp(vote2, "Y") == 0){
+				y++;
+			}
+			
+			else if (strcmp(vote2, "N") == 0){
+				n++;
+			}
+			
+			else if (strcmp(vote2, "I") == 0){
+				i++;
+			}
+			
+			if (strcmp(vote3, "Y") == 0){
+				y++;
+			}
+			
+			else if (strcmp(vote3, "N") == 0){
+				n++;
+			}
+			
+			else if (strcmp(vote3, "I") == 0){
+				i++;
+			}
+			printf("YES: %d\n",y);
+			printf("INDECESIVE: %d\n",i);
+			printf("NO: %d\n", n);
+			return;
+		}
+	}
+	
+	printf("Do you want to quit? ");
+	scanf("%s", answer);
+	if(strcmp(answer,"yes") == 0 || strcmp(answer,"Yes") == 0){
+		return;
+	}
+	getch();
 }
-getch();
 }
